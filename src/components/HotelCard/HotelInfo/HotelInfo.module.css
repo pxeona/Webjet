@@ -6,12 +6,47 @@
   padding: 10px;
 }
 
+.HotelInfo > * {
+  margin: 1px;
+}
+
 .RoomType {
   color: inherit;
 }
 
 .Name {
   color: black;
+  margin-bottom: 5px;
+}
+
+.HalfDiamond {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-right: 6px solid #f2ae43;
+  border-bottom: 5px solid transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.Diamond {
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-bottom-color: #f2ae43;
+  position: relative;
+  top: -5px;
+  display: inline-block;
+}
+.Diamond:after {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 5px;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: #f2ae43;
 }
 
 @media (max-width: 768px) {

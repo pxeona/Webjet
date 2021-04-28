@@ -17,10 +17,6 @@
   width: 22px;
 }
 
-.Rating input:checked ~ .CheckBox {
-  background-color: green;
-}
-
 .Diamonds {
   margin: 5px;
 }
