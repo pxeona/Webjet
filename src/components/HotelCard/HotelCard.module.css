@@ -28,13 +28,13 @@
 
 @media (max-width: 768px) {
   .HotelCard {
-    height: 150px;
     grid-template-columns: 4fr 2fr 1fr;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 1fr 0.25fr;
   }
   .HotelCard img {
     grid-column: 1 / 4;
     height: 100px;
+    max-height: 100%;
   }
   .Price {
     padding: 20px 5px 10px 5px;

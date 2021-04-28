@@ -6,8 +6,13 @@
   background-color: #dc140a;
   display: flex;
   align-items: center;
+  justify-content: center;
   box-sizing: border-box;
   z-index: 90;
+}
+
+.Menu {
+  justify-self: flex-start;
 }
 
 .Logo {
@@ -22,7 +27,6 @@
   }
   .Logo {
     display: block;
-    margin-left: 89px;
     height: 50px;
   }
 }
