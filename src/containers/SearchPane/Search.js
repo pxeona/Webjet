@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import styles from "./SearchPane.module.css";
+import styles from "./Search.module.css";
 import HotelCard from "../../components/HotelCard/HotelCard";
-
 import Filters from "../../components/Filters/Filters";
 import Ad from "../../components/Ad/Ad";
 
@@ -32,14 +31,6 @@ class Search extends Component {
         imgSrc:
           "https://hotelimages.webjet.com.au/hotels/1000000/430000/426600/426574/9c79094d_z.jpg",
       },
-      {
-        hotelName: "Novotel Melbourne on Collins",
-        rating: 2,
-        roomType: "Deluxe King Room",
-        price: 401,
-        imgSrc:
-          "https://hotelimages.webjet.com.au/hotels/1000000/430000/426600/426574/9c79094d_z.jpg",
-      },
     ],
     nameFilter: "",
     ratingFilters: [
@@ -47,19 +38,19 @@ class Search extends Component {
         All: false,
       },
       {
-        5: false,
+        oneStar: false,
       },
       {
-        4: false,
+        twoStar: false,
       },
       {
-        3: false,
+        threeStar: false,
       },
       {
-        2: false,
+        fourStar: false,
       },
       {
-        1: false,
+        fiveStar: false,
       },
       {
         Unrated: false,
@@ -229,15 +220,19 @@ class Search extends Component {
         return <HotelCard key={i} details={hotel} />;
       });
     }
+
+    // const ratingFilters = [...this.state.ratingFilters].map((rating) => {
+    //   return Object.keys(rating)[0];
+    // });
     return (
       <div className={styles.Search}>
         <h2 className={styles.Heading}>
-          {this.state.hotels.length} Hotels Available in Melbourne
+          {this.state.hotels.length} Hotels available in Melbourne
         </h2>
         <div className={styles.MainContent}>
           <Filters
-            ratingFilters={this.state.ratingFilters}
             filterChanged={this.filterHandler}
+            ratingFilter={this.state.ratingFilters}
           />
           <div class={styles.HotelCards}>{hotelCards}</div>
           <Ad />
