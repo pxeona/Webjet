@@ -1,0 +1,18 @@
+.Toolbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #dc140a;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 90;
+}
+
+@media (max-width: 768px) {
+  .Toolbar {
+    height: 50px;
+    justify-content: center;
+  }
+}
