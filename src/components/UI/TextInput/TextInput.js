@@ -16,8 +16,25 @@ class TextInput extends Component {
   render() {
     return (
       <div className={styles.TextBlock}>
-        <input className={styles.TextInput} placeholder="Enter Hotel Name" />
-        <button className={styles.Button}>Go</button>
+        <input
+          value={this.state.inputName}
+          className={styles.TextInput}
+          placeholder="Enter Hotel Name"
+          onChange={this.nameChangedHandler}
+        />
+        <button
+          className={styles.Button}
+          onClick={(event) =>
+            this.props.filterHandler(
+              event,
+              this.props.type,
+              this.state.inputName,
+              null
+            )
+          }
+        >
+          Go
+        </button>
       </div>
     );
   }

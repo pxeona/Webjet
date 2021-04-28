@@ -92,6 +92,49 @@ class Search extends Component {
           });
         }
         break;
+      case "Quality Rating":
+        const updatedRatingFilters = [...this.state.ratingFilters];
+        updatedRatingFilters[inputIdentifier][
+          Object.keys(updatedRatingFilters[inputIdentifier])[0]
+        ] = !updatedRatingFilters[inputIdentifier][
+          Object.keys(updatedRatingFilters[inputIdentifier])[0]
+        ];
+
+        if (
+          updatedRatingFilters[0][Object.keys(updatedRatingFilters[0])[0]] &&
+          inputIdentifier === 0
+        ) {
+          for (let i = 1; i < updatedRatingFilters.length; i++) {
+            updatedRatingFilters[i][
+              Object.keys(updatedRatingFilters[i])[0]
+            ] = false;
+          }
+        } else {
+          updatedRatingFilters[0][
+            Object.keys(updatedRatingFilters[0])[0]
+          ] = false;
+        }
+
+        let filteredByRating = false;
+
+        this.state.ratingFilters.forEach((ratingFilter) => {
+          if (ratingFilter[Object.keys(ratingFilter)[0]]) {
+            filteredByRating = true;
+          }
+        });
+
+        if (filteredByRating === false) {
+          this.setState({
+            isFilteredByRating: false,
+            ratingFilters: updatedRatingFilters,
+          });
+        } else {
+          this.setState({
+            isFilteredByRating: true,
+            ratingFilters: updatedRatingFilters,
+          });
+        }
+        break;
       default:
         return;
     }
