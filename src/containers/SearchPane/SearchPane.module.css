@@ -5,9 +5,29 @@
   padding: 25px 8px;
 }
 
+.Heading {
+  color: #dc140a;
+  display: inline-block;
+  margin: 0px 10px;
+}
+
+.MainContent {
+  grid-template-columns: 1.25fr 4fr 1fr;
+}
+
+.HotelCards > * {
+  margin-bottom: 10px;
+}
+
 @media (max-width: 768px) {
   .Search {
     margin: 50px 0px;
+  }
+  .HotelCards {
+    width: 100%;
+  }
+  .MainContent {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -15,10 +35,23 @@
   .Search {
     margin: 80px 0px;
   }
+  .HotelCards {
+    width: 100%;
+  }
+  .MainContent {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (min-width: 992px) {
   .Search {
     margin: 90px 45px;
+  }
+  .MainContent > * {
+    margin: 10px;
+  }
+
+  .MainContent {
+    grid-template-columns: 1.25fr 4fr 1fr;
   }
 }

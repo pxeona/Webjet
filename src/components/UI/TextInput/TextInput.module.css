@@ -1,5 +1,6 @@
 .TextInput {
   height: 40px;
+  width: 75%;
   border: 0.5px solid lightgray;
   border-right: none;
   padding-left: 10px;
