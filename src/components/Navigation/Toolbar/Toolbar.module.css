@@ -6,7 +6,6 @@
   background-color: #dc140a;
   display: flex;
   align-items: center;
-  justify-content: center;
   box-sizing: border-box;
   z-index: 90;
 }
@@ -20,10 +19,11 @@
   box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .Toolbar {
     height: 50px;
     padding: 12px;
+    justify-content: center;
   }
   .Logo {
     display: block;
@@ -31,7 +31,7 @@
   }
 }
 
-@media (max-width: 992px) and (min-width: 769px) {
+@media (max-width: 991px) and (min-width: 768px) {
   .Toolbar {
     height: 80px;
   }

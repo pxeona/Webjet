@@ -77,10 +77,44 @@ class Search extends Component {
     this.setState({ hotels: sortedHotels });
   }
 
+  filterHandler = (event, type, value, inputIdentifier) => {
+    switch (type) {
+      case "Hotel Name":
+        if (value !== "")
+          this.setState({
+            nameFilter: value,
+            isFilteredByName: true,
+          });
+        else {
+          this.setState({
+            nameFilter: value,
+            isFilteredByName: false,
+          });
+        }
+        break;
+      default:
+        return;
+    }
+  };
+
   render() {
-    const hotelCards = this.state.hotels.map((hotel, i) => (
-      <HotelCard key={i} details={hotel} />
-    ));
+    let filteredHotels = [];
+    let filteredHotelsByName = [];
+
+    let hotelCards = null;
+    if (this.state.isFilteredByName) {
+      if (this.state.nameFilter !== "") {
+        filteredHotelsByName = this.state.hotels.filter(
+          (hotel) => hotel.hotelName === this.state.nameFilter
+        );
+      }
+    } else {
+      filteredHotelsByName = [...this.state.hotels];
+    }
+
+    hotelCards = filteredHotelsByName.map((hotel, i) => {
+      return <HotelCard key={i} details={hotel} />;
+    });
     return (
       <div className={styles.Search}>
         <h2 className={styles.Heading}>
