@@ -43,6 +43,7 @@ class Search extends Component {
     ],
     nameFilter: "",
     ratingFilters: [
+      //Array of objects to set or unset rating filters
       {
         All: false,
       },
@@ -70,6 +71,7 @@ class Search extends Component {
   };
 
   componentDidMount() {
+    //Sorts the hotel list when component is mounted
     const sortedHotels = []
       .concat(this.state.hotels)
       .sort((hotelA, hotelB) => (hotelA.price > hotelB.price ? 1 : -1));
@@ -94,12 +96,13 @@ class Search extends Component {
         break;
       case "Quality Rating":
         const updatedRatingFilters = [...this.state.ratingFilters];
+        const ratingKey = Object.keys(updatedRatingFilters[inputIdentifier])[0]; //Key of the rating to be set or unset
+        //Toggle the rating corresponding to the checkbox clicked
         updatedRatingFilters[inputIdentifier][
-          Object.keys(updatedRatingFilters[inputIdentifier])[0]
-        ] = !updatedRatingFilters[inputIdentifier][
-          Object.keys(updatedRatingFilters[inputIdentifier])[0]
-        ];
+          ratingKey
+        ] = !updatedRatingFilters[inputIdentifier][ratingKey];
 
+        //If 'All' is selected, reset all the other rating checkboxes'
         if (
           updatedRatingFilters[0][Object.keys(updatedRatingFilters[0])[0]] &&
           inputIdentifier === 0
@@ -109,6 +112,7 @@ class Search extends Component {
               Object.keys(updatedRatingFilters[i])[0]
             ] = false;
           }
+          //If 'All' is not selected, set it to false
         } else {
           updatedRatingFilters[0][
             Object.keys(updatedRatingFilters[0])[0]
@@ -117,12 +121,15 @@ class Search extends Component {
 
         let filteredByRating = false;
 
+        //Check whether all the rating checkboxes are unchecked or not
         this.state.ratingFilters.forEach((ratingFilter) => {
           if (ratingFilter[Object.keys(ratingFilter)[0]]) {
             filteredByRating = true;
           }
         });
 
+        //If all the rating boxes unchecked, set isFilteredByRating to false, else set it to true
+        //And update the rating filter array of objects
         if (filteredByRating === false) {
           this.setState({
             isFilteredByRating: false,
@@ -145,26 +152,30 @@ class Search extends Component {
     let filteredHotelsByName = [];
 
     let hotelCards = null;
+    //Filter hotels by hotel name
     if (this.state.isFilteredByName) {
       if (this.state.nameFilter !== "") {
         filteredHotelsByName = this.state.hotels.filter(
           (hotel) => hotel.hotelName === this.state.nameFilter
         );
       }
+      //If not filtered by name, simply assign all the hotels to filteredHotelsByName
     } else {
       filteredHotelsByName = [...this.state.hotels];
     }
 
+    //Filter hotels by rating
     if (this.state.isFilteredByRating) {
       this.state.ratingFilters.forEach((ratingFilter) => {
-        switch (Object.keys(ratingFilter)[0]) {
+        const ratingKey = Object.keys(ratingFilter)[0];
+        switch (ratingKey) {
           case "All":
-            if (ratingFilter[Object.keys(ratingFilter)[0]]) {
+            if (ratingFilter[ratingKey]) {
               filteredHotels = filteredHotelsByName;
             }
             break;
           case "1":
-            if (ratingFilter[Object.keys(ratingFilter)[0]]) {
+            if (ratingFilter[ratingKey]) {
               filteredHotels = filteredHotels.concat(
                 filteredHotelsByName.filter(
                   (hotel) => hotel.rating < 2 && hotel.rating >= 1
@@ -173,7 +184,7 @@ class Search extends Component {
             }
             break;
           case "2":
-            if (ratingFilter[Object.keys(ratingFilter)[0]]) {
+            if (ratingFilter[ratingKey]) {
               filteredHotels = filteredHotels.concat(
                 filteredHotelsByName.filter(
                   (hotel) => hotel.rating < 3 && hotel.rating >= 2
@@ -182,7 +193,7 @@ class Search extends Component {
             }
             break;
           case "3":
-            if (ratingFilter[Object.keys(ratingFilter)[0]]) {
+            if (ratingFilter[ratingKey]) {
               filteredHotels = filteredHotels.concat(
                 filteredHotelsByName.filter(
                   (hotel) => hotel.rating < 4 && hotel.rating >= 3
@@ -191,7 +202,7 @@ class Search extends Component {
             }
             break;
           case "4":
-            if (ratingFilter[Object.keys(ratingFilter)[0]]) {
+            if (ratingFilter[ratingKey]) {
               filteredHotels = filteredHotels.concat(
                 filteredHotelsByName.filter(
                   (hotel) => hotel.rating < 5 && hotel.rating >= 4
@@ -200,7 +211,7 @@ class Search extends Component {
             }
             break;
           case "5":
-            if (ratingFilter[Object.keys(ratingFilter)[0]]) {
+            if (ratingFilter[ratingKey]) {
               filteredHotels = filteredHotels.concat(
                 filteredHotelsByName.filter((hotel) => hotel.rating >= 5)
               );
@@ -208,7 +219,7 @@ class Search extends Component {
             }
             break;
           case "Unrated":
-            if (ratingFilter[Object.keys(ratingFilter)[0]]) {
+            if (ratingFilter[ratingKey]) {
               filteredHotels = filteredHotels.concat(
                 filteredHotelsByName.filter(
                   (hotel) => hotel.rating < 1 && hotel.rating >= 0
@@ -221,10 +232,12 @@ class Search extends Component {
         }
       });
 
+      //Create the Hotel card element from the filtered hotel list
       hotelCards = filteredHotels?.map((hotel, i) => {
         return <HotelCard key={i} details={hotel} />;
       });
     } else {
+      //If not filtered by rating, use filteredHotelsByName to create the JSX elements
       hotelCards = filteredHotelsByName.map((hotel, i) => {
         return <HotelCard key={i} details={hotel} />;
       });

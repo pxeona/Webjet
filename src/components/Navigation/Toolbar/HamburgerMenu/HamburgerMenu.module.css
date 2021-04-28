@@ -1,4 +1,4 @@
-.DrawerToggle {
+.HamBurgerMenu {
   display: flex;
   box-sizing: border-box;
   cursor: pointer;
@@ -13,7 +13,7 @@
 }
 
 @media (min-width: 769px) {
-  .DrawerToggle {
+  .HamBurgerMenu {
     display: none;
   }
 }
