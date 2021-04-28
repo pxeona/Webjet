@@ -1,0 +1,11 @@
+.Search {
+  height: 100vh;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .Search {
+    margin: 50px 0px;
+  }
+}
