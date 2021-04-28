@@ -53,6 +53,9 @@
   .RoomType {
     display: none;
   }
+  .HotelInfo {
+    padding: 5px;
+  }
 }
 
 @media (max-width: 992px) and (min-width: 769px) {
