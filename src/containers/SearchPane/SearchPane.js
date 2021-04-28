@@ -10,7 +10,7 @@ class Search extends Component {
     hotels: [
       {
         hotelName: "Oaks on William",
-        rating: 5,
+        rating: 4.5,
         roomType: "Studio Apartment (No housekeeping)",
         price: 282,
         imgSrc:
@@ -26,19 +26,27 @@ class Search extends Component {
       },
       {
         hotelName: "Novotel Melbourne on Collins",
-        rating: 2,
+        rating: 2.5,
         roomType: "Deluxe King Room",
-        price: 401,
+        price: 500,
         imgSrc:
           "https://hotelimages.webjet.com.au/hotels/1000000/430000/426600/426574/9c79094d_z.jpg",
       },
       {
-        hotelName: "Novotel Melbourne on Collins",
-        rating: 2,
+        hotelName: "Rydges",
+        rating: 2.5,
         roomType: "Deluxe King Room",
-        price: 401,
+        price: 620,
         imgSrc:
-          "https://hotelimages.webjet.com.au/hotels/1000000/430000/426600/426574/9c79094d_z.jpg",
+          "https://hotelimages.webjet.com.au/hotels/1000000/460000/451000/450947/db8fec5b_z.jpg",
+      },
+      {
+        hotelName: "Marriot",
+        rating: 1.5,
+        roomType: "Deluxe King Room",
+        price: 399,
+        imgSrc:
+          "https://hotelimages.webjet.com.au/hotels/1000000/460000/451200/451160/a1830e51_z.jpg",
       },
     ],
     nameFilter: "",
