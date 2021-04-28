@@ -1,0 +1,14 @@
+.TextInput {
+  height: 40px;
+  border: 0.5px solid lightgray;
+  border-right: none;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.Button {
+  height: 41px;
+  width: 50px;
+  border: 0.5px solid lightgray;
+  border-left: none;
+}
