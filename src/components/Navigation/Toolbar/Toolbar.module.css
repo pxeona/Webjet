@@ -18,7 +18,12 @@
 @media (max-width: 768px) {
   .Toolbar {
     height: 50px;
-    justify-content: center;
+    padding: 12px;
+  }
+  .Logo {
+    display: block;
+    margin-left: 89px;
+    height: 50px;
   }
 }
 

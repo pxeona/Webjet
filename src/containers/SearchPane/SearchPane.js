@@ -3,6 +3,7 @@ import styles from "./SearchPane.module.css";
 import HotelCard from "../../components/HotelCard/HotelCard";
 
 import Filters from "../../components/Filters/Filters";
+import Ad from "../../components/Ad/Ad";
 
 class Search extends Component {
   state = {
@@ -54,6 +55,7 @@ class Search extends Component {
         <div className={styles.MainContent}>
           <Filters />
           <div class={styles.HotelCards}>{hotelCards}</div>
+          <Ad />
         </div>
       </div>
     );
