@@ -11,3 +11,8 @@
 .Label {
   margin-left: 5px;
 }
+
+.CheckBox {
+  line-height: 22px;
+  color: #333333;
+}
