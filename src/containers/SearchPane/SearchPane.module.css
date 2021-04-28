@@ -12,7 +12,7 @@
 }
 
 .MainContent {
-  grid-template-columns: 1.25fr 4fr 1fr;
+  display: grid;
 }
 
 .HotelCards > * {

@@ -35,6 +35,9 @@ class Search extends Component {
   };
 
   render() {
+    const hotelCards = this.state.hotels.map((hotel, i) => (
+      <HotelCard key={i} details={hotel} />
+    ));
     return (
       <div className={styles.Search}>
         <h2 className={styles.Heading}>
@@ -42,9 +45,7 @@ class Search extends Component {
         </h2>
         <div className={styles.MainContent}>
           <Filters />
-          <div class={styles.HotelCards}>
-            <HotelCard />
-          </div>
+          <div class={styles.HotelCards}>{hotelCards}</div>
         </div>
       </div>
     );

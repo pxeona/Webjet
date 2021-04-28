@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+}
+
+.HotelInfo {
+  padding: 10px;
+}
+
+.RoomType {
+  color: inherit;
+}
+
+.Name {
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .RoomType {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+}
+
+@media (min-width: 992px) {
+}
