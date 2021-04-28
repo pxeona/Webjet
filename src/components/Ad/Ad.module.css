@@ -1,4 +1,5 @@
 @media (max-width: 991px) {
+  /* For tablets and mobiles */
   .Ad {
     display: none;
   }

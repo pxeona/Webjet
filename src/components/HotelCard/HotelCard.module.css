@@ -38,7 +38,8 @@
   border-bottom: 5px solid transparent;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  /* Mobile screen */
   .HotelCard {
     grid-template-columns: 4fr 2fr 1fr;
     grid-template-rows: 1fr 0.25fr;
@@ -53,7 +54,7 @@
   }
 }
 
-@media (max-width: 992px) and (min-width: 769px) {
+@media (max-width: 991px) and (min-width: 768px) {
   .Button {
     display: none;
   }

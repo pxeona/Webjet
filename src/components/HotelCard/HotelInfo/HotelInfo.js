@@ -6,10 +6,12 @@ const hotelinfo = (props) => {
   let halfDiamonds = null;
   const rating = Math.floor(props.rating);
 
+  // Diamonds logos to represent rating
   diamonds = [...Array(rating)].map((_, i) => {
     return <div className={styles.Diamond} key={i}></div>;
   });
 
+  //Half diamonds in case of decimal points in rating
   if (props.rating % 1 > 0) {
     halfDiamonds = <div className={styles.HalfDiamond}></div>;
   }
@@ -18,7 +20,9 @@ const hotelinfo = (props) => {
       <h3 className={styles.Name}>{props.name}</h3>
       {diamonds}
       {halfDiamonds}
-      <h5 className={styles.RoomType}>Room type: {props.roomType}</h5>
+      <p className={styles.RoomType}>
+        <strong>Room type:</strong> {props.roomType}
+      </p>
     </div>
   );
 };
