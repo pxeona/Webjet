@@ -14,3 +14,8 @@
   border-left: none;
   cursor: pointer;
 }
+
+.TextBlock {
+  display: flex;
+  flex-direction: row;
+}

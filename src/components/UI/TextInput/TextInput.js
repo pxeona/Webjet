@@ -9,7 +9,7 @@ class TextInput extends Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.TextBlock}>
         <input className={styles.TextInput} placeholder="Enter Hotel Name" />
         <button className={styles.Button}>Go</button>
       </div>
