@@ -8,7 +8,7 @@ class Checkbox extends Component {
       <div className={styles.Ratings}>
         <div className={styles.Rating}>
           <input type="checkbox" className={styles.CheckBox}></input>
-          <label className={styles.Label}>Test</label>
+          <div className={styles.Diamond}></div>
         </div>
       </div>
     );

@@ -13,6 +13,29 @@
 }
 
 .CheckBox {
-  line-height: 22px;
-  color: #333333;
+  height: 22px;
+  width: 22px;
+}
+
+.Rating input:checked ~ .CheckBox {
+  background-color: green;
+}
+
+.Diamond {
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-bottom-color: #f2ae43;
+  position: relative;
+  top: -5px;
+}
+.Diamond:after {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 5px;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: #f2ae43;
 }
