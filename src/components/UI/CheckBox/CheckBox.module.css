@@ -1,0 +1,13 @@
+.Rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Ratings {
+  margin: 5px;
+}
+
+.Label {
+  margin-left: 5px;
+}
