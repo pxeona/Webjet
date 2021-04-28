@@ -14,7 +14,9 @@ const hotelcard = (props) => {
       <div className={styles.Price}>
         <h1>{props.details.price}$</h1>
       </div>
-      <button className={styles.Button}></button>
+      <div className={styles.Button}>
+        <div className={styles.RightArrow}></div>
+      </div>
     </div>
   );
 };

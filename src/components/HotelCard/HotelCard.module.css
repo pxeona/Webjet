@@ -24,6 +24,18 @@
   background: #2db300;
   border: none;
   cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.RightArrow {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-left: 6px solid white;
+  border-bottom: 5px solid transparent;
 }
 
 @media (max-width: 768px) {
