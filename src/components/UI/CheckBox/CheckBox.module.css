@@ -21,6 +21,10 @@
   background-color: green;
 }
 
+.Diamonds {
+  margin: 5px;
+}
+
 .Diamond {
   width: 0;
   height: 0;
@@ -28,6 +32,8 @@
   border-bottom-color: #f2ae43;
   position: relative;
   top: -5px;
+  display: inline-block;
+  margin: 1px;
 }
 .Diamond:after {
   content: "";

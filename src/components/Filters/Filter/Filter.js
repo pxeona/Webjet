@@ -11,7 +11,18 @@ const filter = (props) => {
       inputElement = <TextInput type={props.filter} />;
       break;
     case "Quality Rating":
-      inputElement = <CheckBox type={props.filter} />;
+      const ratingFilters = [...props.ratingFilters];
+      inputElement = ratingFilters.map((ratingFilter, i) => {
+        return (
+          <CheckBox
+            key={i}
+            identifier={i}
+            type={props.filter}
+            ratingFilter={Object.keys(ratingFilter)[0]}
+            checked={ratingFilter[Object.keys(ratingFilter)[0]]}
+          />
+        );
+      });
       break;
     default:
       return;

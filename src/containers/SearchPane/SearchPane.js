@@ -47,19 +47,19 @@ class Search extends Component {
         All: false,
       },
       {
-        oneStar: false,
+        5: false,
       },
       {
-        twoStar: false,
+        4: false,
       },
       {
-        threeStar: false,
+        3: false,
       },
       {
-        fourStar: false,
+        2: false,
       },
       {
-        fiveStar: false,
+        1: false,
       },
       {
         Unrated: false,
@@ -87,7 +87,7 @@ class Search extends Component {
           {this.state.hotels.length} Hotels Available in Melbourne
         </h2>
         <div className={styles.MainContent}>
-          <Filters />
+          <Filters ratingFilters={this.state.ratingFilters} />
           <div class={styles.HotelCards}>{hotelCards}</div>
           <Ad />
         </div>
