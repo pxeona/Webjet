@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styles from "./Filters.module.css";
+import Filter from "./Filter/Filter";
 
 class Filters extends Component {
   state = {
@@ -7,9 +8,13 @@ class Filters extends Component {
   };
 
   render() {
+    const filters = this.state.filterNames.map((filter) => {
+      return <Filter filter={filter} />;
+    });
     return (
       <div className={styles.Filters}>
-        <h3>Filter Results</h3>
+        <h4>Filter Results</h4>
+        {filters}
       </div>
     );
   }
