@@ -20,6 +20,7 @@ const filter = (props) => {
             key={i}
             identifier={i}
             type={props.filter}
+            filterHandler={props.filterChanged}
             ratingFilter={Object.keys(ratingFilter)[0]}
             checked={ratingFilter[Object.keys(ratingFilter)[0]]}
           />

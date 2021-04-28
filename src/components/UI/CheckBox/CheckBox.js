@@ -21,7 +21,20 @@ class Checkbox extends Component {
     return (
       <div className={styles.Ratings}>
         <div className={styles.Rating}>
-          <input type="checkbox" className={styles.CheckBox}></input>
+          <input
+            type="checkbox"
+            className={styles.CheckBox}
+            onClick={(event) =>
+              this.props.filterHandler(
+                event,
+                this.props.type,
+                null,
+                this.props.identifier
+              )
+            }
+            checked={this.props.checked}
+            readOnly
+          ></input>
           {label}
         </div>
       </div>
