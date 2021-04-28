@@ -5,6 +5,7 @@ Assumptions
 - The navbar position is fixed at the top
 - Partial matching not added in hotel name search
 - Added error message if no results returned after filtering
+- When a particular rating is choosen to filter, all ratings equal to and above that rating, and less than the next rating, is displayed
 
 Choice of framework/library
 
