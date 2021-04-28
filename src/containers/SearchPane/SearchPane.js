@@ -215,7 +215,6 @@ class Search extends Component {
               filteredHotels = filteredHotels.concat(
                 filteredHotelsByName.filter((hotel) => hotel.rating >= 5)
               );
-              console.log(filteredHotels);
             }
             break;
           case "Unrated":
@@ -242,6 +241,15 @@ class Search extends Component {
         return <HotelCard key={i} details={hotel} />;
       });
     }
+
+    if (hotelCards.length === 0) {
+      hotelCards = (
+        <div className={styles.Error}>
+          There are no hotels available for your filtering criteria.
+        </div>
+      );
+    }
+
     return (
       <div className={styles.Search}>
         <h2 className={styles.Heading}>

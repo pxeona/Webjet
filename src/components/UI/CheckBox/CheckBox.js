@@ -13,6 +13,7 @@ class Checkbox extends Component {
         label = <label className={styles.Label}>Unrated</label>;
         break;
       default:
+        //For all the numerical ratings, diamonds corresponding to the rating is displayed
         label = [...Array(parseInt(this.props.ratingFilter))].map((_, i) => {
           return <div className={styles.Diamond} key={i}></div>;
         });

@@ -8,10 +8,11 @@ class Filters extends Component {
   };
 
   render() {
-    const filters = this.state.filterNames.map((filter) => {
+    const filters = this.state.filterNames.map((filter, i) => {
       return (
         <Filter
           filter={filter}
+          key={i}
           ratingFilters={this.props.ratingFilters}
           filterChanged={this.props.filterChanged}
         />

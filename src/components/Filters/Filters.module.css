@@ -9,7 +9,8 @@
   padding-bottom: 10px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
+  /* For mobiles and tablets */
   .Filters {
     display: none;
   }

@@ -2,6 +2,7 @@
   background-color: white;
   box-sizing: border-box;
   padding: 25px 8px;
+  min-height: 400px;
 }
 
 .Heading {
@@ -16,6 +17,14 @@
 
 .HotelCards > * {
   margin-bottom: 10px;
+}
+
+.Error {
+  background-color: #f2dede;
+  color: #b13312;
+  font-size: 15px;
+  line-height: 130%;
+  padding: 24px;
 }
 
 @media (max-width: 767px) {
