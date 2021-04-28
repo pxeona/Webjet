@@ -16,3 +16,15 @@
     justify-content: center;
   }
 }
+
+@media (max-width: 992px) and (min-width: 769px) {
+  .Toolbar {
+    height: 70px;
+  }
+}
+
+@media (min-width: 992px) {
+  .Toolbar {
+    height: 90px;
+  }
+}
