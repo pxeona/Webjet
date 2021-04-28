@@ -41,7 +41,41 @@ class Search extends Component {
           "https://hotelimages.webjet.com.au/hotels/1000000/430000/426600/426574/9c79094d_z.jpg",
       },
     ],
+    nameFilter: "",
+    ratingFilters: [
+      {
+        All: false,
+      },
+      {
+        oneStar: false,
+      },
+      {
+        twoStar: false,
+      },
+      {
+        threeStar: false,
+      },
+      {
+        fourStar: false,
+      },
+      {
+        fiveStar: false,
+      },
+      {
+        Unrated: false,
+      },
+    ],
+    isFilteredByRating: false,
+    isFilteredByName: false,
   };
+
+  componentDidMount() {
+    const sortedHotels = []
+      .concat(this.state.hotels)
+      .sort((hotelA, hotelB) => (hotelA.price > hotelB.price ? 1 : -1));
+
+    this.setState({ hotels: sortedHotels });
+  }
 
   render() {
     const hotelCards = this.state.hotels.map((hotel, i) => (
