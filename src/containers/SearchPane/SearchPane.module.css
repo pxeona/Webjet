@@ -1,0 +1,71 @@
+.Search {
+  background-color: white;
+  box-sizing: border-box;
+  padding: 25px 8px;
+  min-height: 400px;
+}
+
+.Heading {
+  color: #dc140a;
+  display: inline-block;
+  margin: 0px 10px;
+}
+
+.MainContent {
+  display: grid;
+}
+
+.HotelCards > * {
+  margin-bottom: 10px;
+}
+
+.Error {
+  background-color: #f2dede;
+  color: #b13312;
+  font-size: 15px;
+  line-height: 130%;
+  padding: 24px;
+}
+
+@media (max-width: 767px) {
+  /* Mobile screens */
+  .Search {
+    margin: 50px 0px;
+  }
+  .HotelCards {
+    width: 100%;
+  }
+  .MainContent {
+    grid-template-columns: 1fr;
+  }
+  .Heading {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  /* Tablets */
+  .Search {
+    margin: 80px 0px;
+  }
+  .HotelCards {
+    width: 100%;
+  }
+  .MainContent {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Desktops */
+  .Search {
+    margin: 90px 45px;
+  }
+  .MainContent > * {
+    margin: 10px;
+  }
+
+  .MainContent {
+    grid-template-columns: 1.25fr 4fr 1fr;
+  }
+}

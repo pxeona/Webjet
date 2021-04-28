@@ -1,0 +1,12 @@
+.Filter {
+  border-top: 0.5px solid lightgray;
+  padding: 5px;
+}
+
+.Filter > * {
+  padding: 5px;
+}
+
+.Heading {
+  color: inherit;
+}

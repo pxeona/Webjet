@@ -1,0 +1,43 @@
+.Rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Ratings {
+  margin: 5px;
+}
+
+.Label {
+  margin-left: 5px;
+}
+
+.CheckBox {
+  height: 22px;
+  width: 22px;
+}
+
+.Diamonds {
+  margin: 5px;
+}
+
+.Diamond {
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-bottom-color: #f2ae43;
+  position: relative;
+  top: -5px;
+  display: inline-block;
+  margin: 1px;
+}
+.Diamond:after {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 5px;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: #f2ae43;
+}
