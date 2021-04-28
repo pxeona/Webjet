@@ -121,7 +121,10 @@ class Search extends Component {
           {this.state.hotels.length} Hotels Available in Melbourne
         </h2>
         <div className={styles.MainContent}>
-          <Filters ratingFilters={this.state.ratingFilters} />
+          <Filters
+            ratingFilters={this.state.ratingFilters}
+            filterChanged={this.filterHandler}
+          />
           <div class={styles.HotelCards}>{hotelCards}</div>
           <Ad />
         </div>

@@ -8,7 +8,9 @@ const filter = (props) => {
   let inputElement = null;
   switch (props.filter) {
     case "Hotel Name":
-      inputElement = <TextInput type={props.filter} />;
+      inputElement = (
+        <TextInput type={props.filter} filterHandler={props.filterChanged} />
+      );
       break;
     case "Quality Rating":
       const ratingFilters = [...props.ratingFilters];

@@ -7,6 +7,12 @@ class TextInput extends Component {
     inputName: "",
   };
 
+  nameChangedHandler = (event) => {
+    this.setState({
+      inputName: event.target.value,
+    });
+  };
+
   render() {
     return (
       <div className={styles.TextBlock}>

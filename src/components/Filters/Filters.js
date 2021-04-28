@@ -10,7 +10,11 @@ class Filters extends Component {
   render() {
     const filters = this.state.filterNames.map((filter) => {
       return (
-        <Filter filter={filter} ratingFilters={this.props.ratingFilters} />
+        <Filter
+          filter={filter}
+          ratingFilters={this.props.ratingFilters}
+          filterChanged={this.props.filterChanged}
+        />
       );
     });
     return (
