@@ -31,6 +31,14 @@ class Search extends Component {
         imgSrc:
           "https://hotelimages.webjet.com.au/hotels/1000000/430000/426600/426574/9c79094d_z.jpg",
       },
+      {
+        hotelName: "Novotel Melbourne on Collins",
+        rating: 2,
+        roomType: "Deluxe King Room",
+        price: 401,
+        imgSrc:
+          "https://hotelimages.webjet.com.au/hotels/1000000/430000/426600/426574/9c79094d_z.jpg",
+      },
     ],
   };
 

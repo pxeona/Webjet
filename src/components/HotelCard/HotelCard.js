@@ -11,6 +11,10 @@ const hotelcard = (props) => {
         rating={props.details.rating}
         roomType={props.details.roomType}
       />
+      <div className={styles.Price}>
+        <h1>{props.details.price}$</h1>
+      </div>
+      <button className={styles.Button}></button>
     </div>
   );
 };
