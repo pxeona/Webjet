@@ -20,7 +20,7 @@ git clone https://github.com/pxeona/Webjet.git
 
 A step by step series of examples that tell you how to get the development env running
 
-- Navigate to the root directory of the cloned project and run the below command:
+- Navigate to the root directory of the cloned project and run the below command to install all dependencies:
 ```
 npm install
 ```
